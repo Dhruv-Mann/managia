@@ -460,21 +460,23 @@ const startInertia = (vx: number, vy: number) => {
 };
 
 const onDragStart = (e: MouseEvent | TouchEvent) => {
+  if ('touches' in e) return;
   if (focusedElRef) return;
   stopInertia();
   draggingRef = true;
   movedRef = false;
   startRotRef.x = rotationRef.x;
   startRotRef.y = rotationRef.y;
-  const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
-  const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
+  const clientX = e.clientX;
+  const clientY = e.clientY;
   startPosRef = { x: clientX, y: clientY };
 };
 
 const onDragMove = (e: MouseEvent | TouchEvent) => {
+  if ('touches' in e) return;
   if (focusedElRef || !draggingRef || !startPosRef) return;
-  const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
-  const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
+  const clientX = e.clientX;
+  const clientY = e.clientY;
   const dxTotal = clientX - startPosRef.x;
   const dyTotal = clientY - startPosRef.y;
   if (!movedRef && dxTotal * dxTotal + dyTotal * dyTotal > 16) movedRef = true;
@@ -492,11 +494,12 @@ const onDragMove = (e: MouseEvent | TouchEvent) => {
 };
 
 const onDragEnd = (e: MouseEvent | TouchEvent) => {
+  if ('changedTouches' in e || 'touches' in e) return;
   if (!draggingRef) return;
   draggingRef = false;
   if (movedRef && startPosRef) {
-    const clientX = 'changedTouches' in e ? (e.changedTouches[0]?.clientX ?? 0) : e.clientX;
-    const clientY = 'changedTouches' in e ? (e.changedTouches[0]?.clientY ?? 0) : e.clientY;
+    const clientX = e.clientX;
+    const clientY = e.clientY;
     const vx = clamp(((clientX - startPosRef.x) / props.dragSensitivity) * 0.02, -1.2, 1.2);
     const vy = clamp(((clientY - startPosRef.y) / props.dragSensitivity) * 0.02, -1.2, 1.2);
     if (Math.abs(vx) > 0.005 || Math.abs(vy) > 0.005) startInertia(vx, vy);
