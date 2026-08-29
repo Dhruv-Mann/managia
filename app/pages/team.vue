@@ -14,10 +14,7 @@
 
     <section class="px-6 md:px-12 lg:px-24 pt-24 relative z-10">
       
-      <!-- ASCII Art Decoration -->
-      <div class="absolute top-[20%] -left-16 opacity-60 pointer-events-none hidden lg:block mix-blend-multiply -z-10">
-        <UiAsciiArt src="/ascii-rose.svg?v=2" :width="100" :fontSize="6" />
-      </div>
+
 
       <!-- Bento Grid Layout -->
       <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 auto-rows-[350px]">

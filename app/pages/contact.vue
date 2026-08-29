@@ -12,10 +12,7 @@
           Whether you have a question about our events, want to partner with us, or just want to say hireach out directly to our team.
         </p>
 
-        <!-- ASCII Art Decoration -->
-        <div class="absolute -bottom-24 -left-12 opacity-60 pointer-events-none hidden lg:block mix-blend-multiply z-0">
-          <UiAsciiArt src="/ascii-branch.svg?v=2" :width="90" :fontSize="6" />
-        </div>
+
 
         <div class="mt-16 space-y-8 relative z-10">
           <div class="flex items-center gap-6 group">

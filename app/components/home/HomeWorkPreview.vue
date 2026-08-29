@@ -10,10 +10,7 @@ useScrollReveal('.scroll-reveal')
   <section class="relative bg-root py-24 px-6 md:px-12 lg:px-24">
     <UiSectionHeader title="What We Do" class="scroll-reveal relative z-10" />
     
-    <!-- ASCII Art Decoration -->
-    <div class="absolute -top-12 right-24 opacity-60 pointer-events-none hidden lg:block mix-blend-multiply scroll-reveal" style="transition-delay: 400ms">
-      <UiAsciiArt src="/ascii-branch.svg?v=2" :width="90" :fontSize="6" />
-    </div>
+
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16 relative z-10">
       <div 
