@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-root text-text-primary font-sans antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  /* Strip default button styles */
+  button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font: inherit;
+    color: inherit;
+  }
+
+  /* Sensible img defaults */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Focus ring — Maya glowing focus */
+  :focus-visible {
+    outline: 2px solid #8B5E3C;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(139, 94, 60, 0.20);
+  }
+}
+
+@layer components {
+  /* Maya-compliant layered shadows */
+  .shadow-card {
+    box-shadow:
+      0 2px 8px rgba(0, 0, 0, 0.06),
+      0 8px 32px rgba(0, 0, 0, 0.04);
+  }
+
+  .shadow-card-hover {
+    box-shadow:
+      0 4px 16px rgba(0, 0, 0, 0.08),
+      0 16px 48px rgba(0, 0, 0, 0.06);
+  }
+
+  .shadow-elevated {
+    box-shadow:
+      0 4px 16px rgba(0, 0, 0, 0.12),
+      0 20px 64px rgba(0, 0, 0, 0.08);
+  }
+}
+
+@layer utilities {
+  /* Scroll reveal animation */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition:
+      opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-reveal.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Hide scrollbar utility */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Masonry / Waterfall grid */
+  .masonry-grid {
+    column-count: 1;
+    column-gap: 16px;
+  }
+
+  @media (min-width: 640px) {
+    .masonry-grid {
+      column-count: 2;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .masonry-grid {
+      column-count: 3;
+      column-gap: 20px;
+    }
+  }
+
+  .masonry-item {
+    break-inside: avoid;
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: 1024px) {
+    .masonry-item {
+      margin-bottom: 20px;
+    }
+  }
+
+  /* Text opacity helpers matching Maya text emphasis */
+  .text-secondary {
+    opacity: 0.55;
+  }
+
+  .text-muted {
+    opacity: 0.35;
+  }
+
+  /* Viewport virtualization for gallery */
+  .virtualize {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 300px;
+  }
+}
