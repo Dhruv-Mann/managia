@@ -36,7 +36,7 @@
               <img
                 :src="image.src"
                 :alt="image.alt"
-                class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500"
+                class="w-full h-full object-cover transition-all duration-500"
               />
 
               <div class="absolute inset-0 bg-gradient-to-t from-surface-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
