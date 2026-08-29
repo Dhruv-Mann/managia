@@ -58,7 +58,7 @@ useParallax('.parallax-hero-img', 0.15)
       </div>
 
       <!-- Right: Spinning Logo (10%) -->
-      <div class="relative w-full h-full min-h-[40vh] md:min-h-[60vh] flex items-end justify-start pb-4 md:pb-8 group">
+      <div class="relative w-full md:h-full h-auto md:min-h-[60vh] flex items-center md:items-end justify-center md:justify-start pt-4 md:pt-0 pb-4 md:pb-8 group">
         <!-- Circular Badge with Micro-Interactions -->
         <div class="w-32 h-32 md:w-40 md:h-40 bg-root rounded-full flex items-center justify-center shadow-card z-20 cursor-pointer group/badge hover:scale-110 transition-transform duration-500 ease-out">
           <svg class="w-full h-full text-surface-dark animate-[spin_15s_linear_infinite] group-hover/badge:[animation-play-state:paused]" viewBox="0 0 100 100">
