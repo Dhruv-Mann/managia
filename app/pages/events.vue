@@ -15,7 +15,7 @@
             :key="filter"
             @click="activeFilter = filter"
             class="px-4 py-2 rounded-lg font-sans text-sm transition-colors duration-150 active:scale-95"
-            :class="activeFilter === filter ? 'bg-accent text-text-light' : 'bg-surface-mid/10 text-text-primary hover:bg-surface-mid/20'"
+            :class="activeFilter === filter ? 'bg-surface-dark text-text-light' : 'bg-surface-mid/10 text-text-primary hover:bg-surface-mid/20'"
           >
             {{ filter }}
           </button>
