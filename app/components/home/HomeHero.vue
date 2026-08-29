@@ -49,28 +49,29 @@ useParallax('.parallax-hero-img', 0.15)
       
     </div>
 
-    <!-- Massive Image Container -->
-    <div class="w-full max-w-[1800px] mx-auto mt-12 md:mt-16 relative flex-1 min-h-[40vh] md:min-h-[50vh] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl group hero-reveal" style="transition-delay: 200ms;">
-      <img
-        src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=2400&auto=format&fit=crop"
-        alt="Managia Community"
-        class="absolute inset-0 w-full h-[120%] object-cover parallax-hero-img grayscale-[0.3] group-hover:grayscale-0 transition-all duration-700 ease-out -translate-y-[10%]"
-      />
-      <!-- Inner overlay for subtle depth -->
-      <div class="absolute inset-0 bg-surface-dark/10 group-hover:bg-root transition-colors duration-700"></div>
+    <!-- Two Column Layout (90/10) -->
+    <div class="w-full max-w-[1800px] mx-auto mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-[9fr_1fr] gap-8 items-stretch min-h-[40vh] md:min-h-[50vh] hero-reveal" style="transition-delay: 200ms;">
+      
+      <!-- Left: DomeGallery (70%) -->
+      <div class="relative w-full h-full min-h-[40vh] md:min-h-[60vh] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl bg-[#000000] group">
+        <UiDomeGallery :grayscale="false" :segments="25" />
+      </div>
 
-      <!-- Circular Badge with Micro-Interactions -->
-      <div class="absolute bottom-6 right-6 md:bottom-12 md:right-12 w-32 h-32 md:w-40 md:h-40 bg-root rounded-full flex items-center justify-center shadow-card z-20 cursor-pointer group/badge hover:scale-110 transition-transform duration-500 ease-out">
-        <svg class="w-full h-full text-surface-dark animate-[spin_15s_linear_infinite] group-hover/badge:[animation-play-state:paused]" viewBox="0 0 100 100">
-          <path id="curve" fill="transparent" d="M 50 15 A 35 35 0 1 1 49.9 15" />
-          <text class="font-mono text-[9px] md:text-[10px] font-bold tracking-[0.2em] uppercase" fill="currentColor">
-            <textPath href="#curve" startOffset="0%">
-              Innovation • Community • Culture • 
-            </textPath>
-          </text>
-        </svg>
-        <!-- Center Logo in Badge -->
-        <img src="/logo-dark.svg" class="absolute w-10 h-10 md:w-12 md:h-12 opacity-90 group-hover/badge:rotate-[360deg] group-hover/badge:scale-110 transition-all duration-700 ease-out" alt="Logo" />
+      <!-- Right: Spinning Logo (10%) -->
+      <div class="relative w-full h-full min-h-[40vh] md:min-h-[60vh] flex items-end justify-start pb-4 md:pb-8 group">
+        <!-- Circular Badge with Micro-Interactions -->
+        <div class="w-32 h-32 md:w-40 md:h-40 bg-root rounded-full flex items-center justify-center shadow-card z-20 cursor-pointer group/badge hover:scale-110 transition-transform duration-500 ease-out">
+          <svg class="w-full h-full text-surface-dark animate-[spin_15s_linear_infinite] group-hover/badge:[animation-play-state:paused]" viewBox="0 0 100 100">
+            <path id="curve" fill="transparent" d="M 50 15 A 35 35 0 1 1 49.9 15" />
+            <text class="font-mono text-[9px] md:text-[10px] font-bold tracking-[0.2em] uppercase" fill="currentColor">
+              <textPath href="#curve" startOffset="0%">
+                Innovation • Community • Culture • 
+              </textPath>
+            </text>
+          </svg>
+          <!-- Center Logo in Badge -->
+          <img src="/logo-dark.svg" class="absolute w-10 h-10 md:w-12 md:h-12 opacity-90 group-hover/badge:rotate-[360deg] group-hover/badge:scale-110 transition-all duration-700 ease-out" alt="Logo" />
+        </div>
       </div>
     </div>
 
