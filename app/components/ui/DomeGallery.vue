@@ -16,7 +16,8 @@
   >
     <main
       ref="mainRef"
-      class="absolute inset-0 place-items-center grid bg-transparent overflow-hidden touch-none select-none"
+      class="absolute inset-0 place-items-center grid bg-transparent overflow-hidden touch-none select-none transition-opacity duration-[1500ms] ease-in-out"
+      :style="{ opacity: isReady ? 1 : 0 } as StyleValue"
     >
       <div
         class="place-items-center grid w-full h-full"
@@ -254,6 +255,7 @@ const scrimRef = useTemplateRef<HTMLDivElement>('scrimRef');
 const frameRef = useTemplateRef<HTMLDivElement>('frameRef');
 
 const isEnlarging = ref(false);
+const isReady = ref(false);
 
 const rotationRef = { x: 0, y: 0 };
 const startRotRef = { x: 0, y: 0 };
@@ -405,6 +407,14 @@ const computeRadius = () => {
       enlargedOverlay.style.width = `${frameR.width}px`;
       enlargedOverlay.style.height = `${frameR.height}px`;
     }
+  }
+
+  if (!isReady.value) {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        isReady.value = true;
+      });
+    });
   }
 };
 
