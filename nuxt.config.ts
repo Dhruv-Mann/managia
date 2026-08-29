@@ -12,8 +12,7 @@ export default defineNuxtConfig({
       title: 'Managia',
       titleTemplate: '%s | Managia',
       link: [
-        { rel: 'icon', type: 'image/svg+xml', href: '/logo-dark.svg' },
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+        { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }
       ],
       meta: [
         { name: 'description', content: 'A collective of MBA students redefining what a club can be.' }
