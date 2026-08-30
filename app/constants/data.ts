@@ -200,36 +200,29 @@ export const EVENT_CATEGORIES = [
 ]
 
 export const EVENTS_PHOTOS = [
-  // Jash-E-Bharat
-  { id: 'jb_1', src: '/images/events/jash-e-bharat/image_1.webp', category: 'Jash-E-Bharat' },
-  { id: 'jb_2', src: '/images/events/jash-e-bharat/image_2___cover_page_.webp', category: 'Jash-E-Bharat' },
   { id: 'jb_3', src: '/images/events/jash-e-bharat/image_3.webp', category: 'Jash-E-Bharat' },
-  { id: 'jb_4', src: '/images/events/jash-e-bharat/image_4.webp', category: 'Jash-E-Bharat' },
-  { id: 'jb_5', src: '/images/events/jash-e-bharat/image_5.webp', category: 'Jash-E-Bharat' },
-  { id: 'jb_6', src: '/images/events/jash-e-bharat/image_6.webp', category: 'Jash-E-Bharat' },
-  { id: 'jb_7', src: '/images/events/jash-e-bharat/image_7.webp', category: 'Jash-E-Bharat' },
-  
-  // Jumanji
-  { id: 'jm_1', src: '/images/events/jumanji/image_1.webp', category: 'Jumanji' },
-  { id: 'jm_2', src: '/images/events/jumanji/image_2.webp', category: 'Jumanji' },
-  { id: 'jm_3', src: '/images/events/jumanji/image_3.webp', category: 'Jumanji' },
-  { id: 'jm_4', src: '/images/events/jumanji/image_4.webp', category: 'Jumanji' },
-  { id: 'jm_5', src: '/images/events/jumanji/image_5___cover_page_.webp', category: 'Jumanji' },
-  { id: 'jm_6', src: '/images/events/jumanji/image_6.webp', category: 'Jumanji' },
-  { id: 'jm_7', src: '/images/events/jumanji/image_7.webp', category: 'Jumanji' },
-  { id: 'jm_8', src: '/images/events/jumanji/image_8.webp', category: 'Jumanji' },
-
-  // Maharana KIKA
-  { id: 'mk_1', src: '/images/events/maharana-kika/image_1___cover_page_.webp', category: 'Maharana KIKA' },
-
-  // Traitors
-  { id: 'tr_1', src: '/images/events/traitors/image_1.webp', category: 'Traitors' },
-  { id: 'tr_2', src: '/images/events/traitors/image_2.webp', category: 'Traitors' },
-  { id: 'tr_3', src: '/images/events/traitors/image_3.webp', category: 'Traitors' },
-  { id: 'tr_4', src: '/images/events/traitors/image_4___cover_page_.webp', category: 'Traitors' },
   { id: 'tr_5', src: '/images/events/traitors/image_5.webp', category: 'Traitors' },
+  { id: 'jm_7', src: '/images/events/jumanji/image_7.webp', category: 'Jumanji' },
+  { id: 'jm_1', src: '/images/events/jumanji/image_1.webp', category: 'Jumanji' },
+  { id: 'jb_6', src: '/images/events/jash-e-bharat/image_6.webp', category: 'Jash-E-Bharat' },
+  { id: 'tr_2', src: '/images/events/traitors/image_2.webp', category: 'Traitors' },
+  { id: 'jm_4', src: '/images/events/jumanji/image_4.webp', category: 'Jumanji' },
+  { id: 'jb_1', src: '/images/events/jash-e-bharat/image_1.webp', category: 'Jash-E-Bharat' },
+  { id: 'mk_1', src: '/images/events/maharana-kika/image_1___cover_page_.webp', category: 'Maharana KIKA' },
   { id: 'tr_6', src: '/images/events/traitors/image_6.webp', category: 'Traitors' },
+  { id: 'jm_8', src: '/images/events/jumanji/image_8.webp', category: 'Jumanji' },
+  { id: 'jb_4', src: '/images/events/jash-e-bharat/image_4.webp', category: 'Jash-E-Bharat' },
+  { id: 'tr_1', src: '/images/events/traitors/image_1.webp', category: 'Traitors' },
+  { id: 'jm_2', src: '/images/events/jumanji/image_2.webp', category: 'Jumanji' },
+  { id: 'jb_7', src: '/images/events/jash-e-bharat/image_7.webp', category: 'Jash-E-Bharat' },
   { id: 'tr_7', src: '/images/events/traitors/image_7.webp', category: 'Traitors' },
+  { id: 'jm_5', src: '/images/events/jumanji/image_5___cover_page_.webp', category: 'Jumanji' },
+  { id: 'jb_2', src: '/images/events/jash-e-bharat/image_2___cover_page_.webp', category: 'Jash-E-Bharat' },
+  { id: 'jm_6', src: '/images/events/jumanji/image_6.webp', category: 'Jumanji' },
+  { id: 'tr_4', src: '/images/events/traitors/image_4___cover_page_.webp', category: 'Traitors' },
+  { id: 'jm_3', src: '/images/events/jumanji/image_3.webp', category: 'Jumanji' },
+  { id: 'jb_5', src: '/images/events/jash-e-bharat/image_5.webp', category: 'Jash-E-Bharat' },
+  { id: 'tr_3', src: '/images/events/traitors/image_3.webp', category: 'Traitors' },
 ]
 
 export const GLOBE_IMAGES = [
