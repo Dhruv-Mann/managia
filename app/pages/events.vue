@@ -68,7 +68,12 @@ watch(() => route.query.category, (newCategory) => {
 
 const filteredImages = computed(() => {
   if (activeFilter.value === 'All') return EVENTS_PHOTOS
-  return EVENTS_PHOTOS.filter(img => img.category === activeFilter.value)
+  
+  // By sorting the filtered category by ID, we ensure a structured view for individual events 
+  // and guarantee the first photo changes when switching from the randomized 'All' tab.
+  return [...EVENTS_PHOTOS]
+    .filter(img => img.category === activeFilter.value)
+    .sort((a, b) => a.id.localeCompare(b.id))
 })
 
 const { refresh } = useScrollReveal('.scroll-reveal')
