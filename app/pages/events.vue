@@ -11,7 +11,7 @@
         <!-- Filters -->
         <div class="flex flex-wrap gap-3 mb-12 scroll-reveal">
           <button
-            v-for="filter in filters"
+            v-for="filter in EVENT_CATEGORIES"
             :key="filter"
             @click="activeFilter = filter"
             class="px-4 py-2 rounded-lg font-sans text-sm transition-colors duration-150 active:scale-95"
@@ -21,15 +21,23 @@
           </button>
         </div>
 
-        <!-- Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <EventCard
-            v-for="(event, index) in filteredEvents"
-            :key="event.id"
-            :event="event"
-            class="scroll-reveal"
-            :style="{ transitionDelay: `${(index % 3) * 100}ms` }"
-          />
+        <!-- Masonry Grid -->
+        <div class="masonry-grid">
+          <div
+            v-for="(image, index) in filteredImages"
+            :key="image.id"
+            class="masonry-item scroll-reveal mb-6"
+            :style="{ transitionDelay: `${(index % 4) * 100}ms` }"
+          >
+            <div class="relative rounded-xl overflow-hidden bg-surface-mid/10">
+              <img
+                :src="image.src"
+                :alt="image.category"
+                class="w-full h-auto object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -37,29 +45,56 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
-import { EVENTS } from '~/constants/data'
-import EventCard from '~/components/events/EventCard.vue'
+import { ref, computed, watch, nextTick } from 'vue'
+import { useRoute } from 'vue-router'
+import { EVENTS_PHOTOS, EVENT_CATEGORIES } from '~/constants/data'
 import { useScrollReveal } from '~/composables/useScrollReveal'
 
 useHead({
   title: 'Events  Managia'
 })
 
-const filters = ['All', 'Hackathons', 'Conferences', 'Cultural', 'Games', 'Social']
-const activeFilter = ref('All')
+const route = useRoute()
+const activeFilter = ref(route.query.category ? String(route.query.category) : 'All')
 
-const filteredEvents = computed(() => {
-  if (activeFilter.value === 'All') return EVENTS
-  const categoryMap: Record<string, string> = {
-    'Hackathons': 'hackathon',
-    'Conferences': 'conference',
-    'Cultural': 'cultural',
-    'Games': 'games',
-    'Social': 'social'
+// Ensure filter stays in sync if user navigates via browser history or links
+watch(() => route.query.category, (newCategory) => {
+  if (newCategory) {
+    activeFilter.value = String(newCategory)
+  } else {
+    activeFilter.value = 'All'
   }
-  return EVENTS.filter(e => e.category === categoryMap[activeFilter.value])
 })
 
-useScrollReveal('.scroll-reveal')
+const filteredImages = computed(() => {
+  if (activeFilter.value === 'All') return EVENTS_PHOTOS
+  return EVENTS_PHOTOS.filter(img => img.category === activeFilter.value)
+})
+
+const { refresh } = useScrollReveal('.scroll-reveal')
+
+watch(filteredImages, async () => {
+  await nextTick()
+  refresh()
+})
 </script>
+
+<style scoped>
+.masonry-grid {
+  column-count: 1;
+  column-gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+@media (min-width: 1024px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+.masonry-item {
+  break-inside: avoid;
+}
+</style>

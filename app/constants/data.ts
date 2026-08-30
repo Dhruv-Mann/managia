@@ -158,99 +158,93 @@ export const EVENTS: ClubEvent[] = [
 
 export const GALLERY_IMAGES: GalleryImage[] = [
   {
-    id: 'g1',
-    src: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=800&auto=format&fit=crop',
-    alt: 'Students collaborating at hackathon',
+    id: 'g_jash',
+    src: '/images/events/jash-e-bharat/image_2___cover_page_.webp',
+    alt: 'Jash-E-Bharat event',
     category: 'events',
-    eventName: 'HackManage 2025',
-    date: 'Sep 2025',
-    aspect: 'tall',
-  },
-  {
-    id: 'g2',
-    src: 'https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=800&auto=format&fit=crop',
-    alt: 'Speaker on stage at conference',
-    category: 'events',
-    eventName: 'Founders Forum',
-    date: 'Oct 2025',
+    eventName: 'Jash-E-Bharat',
     aspect: 'wide',
   },
   {
-    id: 'g3',
-    src: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop',
-    alt: 'Team working together',
-    category: 'team',
-    aspect: 'square',
-  },
-  {
-    id: 'g4',
-    src: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=800&auto=format&fit=crop',
-    alt: 'Cultural night performance',
+    id: 'g_jumanji',
+    src: '/images/events/jumanji/image_5___cover_page_.webp',
+    alt: 'Jumanji event',
     category: 'events',
-    eventName: 'Cultural Night 2025',
-    date: 'Nov 2025',
+    eventName: 'Jumanji',
     aspect: 'tall',
   },
   {
-    id: 'g5',
-    src: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800&auto=format&fit=crop',
-    alt: 'Workshop in progress',
-    category: 'workshops',
-    aspect: 'wide',
-  },
-  {
-    id: 'g6',
-    src: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=800&auto=format&fit=crop',
-    alt: 'Campus building exterior',
-    category: 'campus',
-    aspect: 'square',
-  },
-  {
-    id: 'g7',
-    src: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=800&auto=format&fit=crop',
-    alt: 'Group discussion at workshop',
-    category: 'workshops',
-    aspect: 'tall',
-  },
-  {
-    id: 'g8',
-    src: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop',
-    alt: 'Team celebration',
-    category: 'team',
-    aspect: 'wide',
-  },
-  {
-    id: 'g9',
-    src: 'https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=800&auto=format&fit=crop',
-    alt: 'Social gathering with friends',
+    id: 'g_kika',
+    src: '/images/events/maharana-kika/image_1___cover_page_.webp',
+    alt: 'Maharana KIKA event',
     category: 'events',
-    eventName: 'Spring Mixer',
-    date: 'Mar 2025',
+    eventName: 'Maharana KIKA',
     aspect: 'square',
   },
   {
-    id: 'g10',
-    src: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=600&auto=format&fit=crop',
-    alt: 'Brainstorming session',
-    category: 'workshops',
-    aspect: 'tall',
-  },
-  {
-    id: 'g11',
-    src: 'https://images.unsplash.com/photo-1507537362848-9c7e70b7b5c1?q=80&w=800&auto=format&fit=crop',
-    alt: 'Campus at dusk',
-    category: 'campus',
+    id: 'g_traitors',
+    src: '/images/events/traitors/image_4___cover_page_.webp',
+    alt: 'Traitors event',
+    category: 'events',
+    eventName: 'Traitors',
     aspect: 'wide',
   },
-  {
-    id: 'g12',
-    src: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=800&auto=format&fit=crop',
-    alt: 'Game night crowd',
-    category: 'events',
-    eventName: 'Game Night Championship',
-    date: 'Oct 2025',
-    aspect: 'square',
-  },
+]
+
+export const EVENT_CATEGORIES = [
+  'All',
+  'Jash-E-Bharat',
+  'Jumanji',
+  'Maharana KIKA',
+  'Traitors'
+]
+
+export const EVENTS_PHOTOS = [
+  // Jash-E-Bharat
+  { id: 'jb_1', src: '/images/events/jash-e-bharat/image_1.webp', category: 'Jash-E-Bharat' },
+  { id: 'jb_2', src: '/images/events/jash-e-bharat/image_2___cover_page_.webp', category: 'Jash-E-Bharat' },
+  { id: 'jb_3', src: '/images/events/jash-e-bharat/image_3.webp', category: 'Jash-E-Bharat' },
+  { id: 'jb_4', src: '/images/events/jash-e-bharat/image_4.webp', category: 'Jash-E-Bharat' },
+  { id: 'jb_5', src: '/images/events/jash-e-bharat/image_5.webp', category: 'Jash-E-Bharat' },
+  { id: 'jb_6', src: '/images/events/jash-e-bharat/image_6.webp', category: 'Jash-E-Bharat' },
+  { id: 'jb_7', src: '/images/events/jash-e-bharat/image_7.webp', category: 'Jash-E-Bharat' },
+  
+  // Jumanji
+  { id: 'jm_1', src: '/images/events/jumanji/image_1.webp', category: 'Jumanji' },
+  { id: 'jm_2', src: '/images/events/jumanji/image_2.webp', category: 'Jumanji' },
+  { id: 'jm_3', src: '/images/events/jumanji/image_3.webp', category: 'Jumanji' },
+  { id: 'jm_4', src: '/images/events/jumanji/image_4.webp', category: 'Jumanji' },
+  { id: 'jm_5', src: '/images/events/jumanji/image_5___cover_page_.webp', category: 'Jumanji' },
+  { id: 'jm_6', src: '/images/events/jumanji/image_6.webp', category: 'Jumanji' },
+  { id: 'jm_7', src: '/images/events/jumanji/image_7.webp', category: 'Jumanji' },
+  { id: 'jm_8', src: '/images/events/jumanji/image_8.webp', category: 'Jumanji' },
+
+  // Maharana KIKA
+  { id: 'mk_1', src: '/images/events/maharana-kika/image_1___cover_page_.webp', category: 'Maharana KIKA' },
+
+  // Traitors
+  { id: 'tr_1', src: '/images/events/traitors/image_1.webp', category: 'Traitors' },
+  { id: 'tr_2', src: '/images/events/traitors/image_2.webp', category: 'Traitors' },
+  { id: 'tr_3', src: '/images/events/traitors/image_3.webp', category: 'Traitors' },
+  { id: 'tr_4', src: '/images/events/traitors/image_4___cover_page_.webp', category: 'Traitors' },
+  { id: 'tr_5', src: '/images/events/traitors/image_5.webp', category: 'Traitors' },
+  { id: 'tr_6', src: '/images/events/traitors/image_6.webp', category: 'Traitors' },
+  { id: 'tr_7', src: '/images/events/traitors/image_7.webp', category: 'Traitors' },
+]
+
+export const GLOBE_IMAGES = [
+  '/images/globe/image_10.webp',
+  '/images/globe/image_11.webp',
+  '/images/globe/image_12.webp',
+  '/images/globe/image_13.webp',
+  '/images/globe/image_2.webp',
+  '/images/globe/image_3.webp',
+  '/images/globe/image_4_.webp',
+  '/images/globe/image_5.webp',
+  '/images/globe/image_6.webp',
+  '/images/globe/image_7.webp',
+  '/images/globe/image_8.webp',
+  '/images/globe/image_9.webp'
 ]
 
 // ─── Membership Plans ────────────────────────────────────────────

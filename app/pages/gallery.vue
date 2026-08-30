@@ -8,42 +8,30 @@
 
     <section class="px-6 md:px-12 lg:px-24 pt-12">
       <div class="max-w-7xl mx-auto">
-        <!-- Filters -->
-        <div class="flex flex-wrap gap-3 mb-12 scroll-reveal">
-          <button
-            v-for="filter in filters"
-            :key="filter"
-            @click="activeFilter = filter"
-            class="px-4 py-2 rounded-lg font-sans text-sm transition-colors duration-150 active:scale-95"
-            :class="activeFilter === filter ? 'bg-surface-dark text-text-light' : 'bg-surface-mid/10 text-text-primary hover:bg-surface-mid/20'"
-          >
-            {{ filter }}
-          </button>
-        </div>
 
-        <!-- Masonry Grid -->
-        <div class="masonry-grid">
+        <!-- Bento Grid -->
+        <div class="bento-grid">
           <div
-            v-for="(image, index) in filteredImages"
+            v-for="(image, index) in GALLERY_IMAGES"
             :key="image.id"
-            class="masonry-item scroll-reveal mb-6"
+            class="bento-item scroll-reveal"
             :style="{ transitionDelay: `${(index % 4) * 100}ms` }"
           >
-            <div
-              class="relative rounded-xl overflow-hidden group virtualize bg-surface-mid/10"
-              :class="getHeightClass(image.aspect)"
+            <NuxtLink
+              :to="{ path: '/events', query: { category: image.eventName } }"
+              class="relative rounded-xl overflow-hidden group virtualize bg-surface-mid/10 h-full w-full block"
             >
               <img
                 :src="image.src"
                 :alt="image.alt"
-                class="w-full h-full object-cover transition-all duration-500"
+                class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
               />
 
               <div class="absolute inset-0 bg-gradient-to-t from-surface-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                 <p v-if="image.eventName" class="font-display text-text-light text-lg">{{ image.eventName }}</p>
                 <p v-if="image.date" class="font-mono text-text-light/70 text-xs mt-1">{{ image.date }}</p>
               </div>
-            </div>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -60,40 +48,45 @@ useHead({
   title: 'Gallery  Managia'
 })
 
-const filters = ['All', 'Events', 'Team', 'Campus', 'Workshops']
-const activeFilter = ref('All')
 
-const filteredImages = computed(() => {
-  if (activeFilter.value === 'All') return GALLERY_IMAGES
-  const category = activeFilter.value.toLowerCase()
-  return GALLERY_IMAGES.filter(img => img.category === category)
-})
 
-const getHeightClass = (aspect: 'tall' | 'wide' | 'square') => {
-  if (aspect === 'tall') return 'h-80'
-  if (aspect === 'wide') return 'h-52'
-  return 'h-64'
-}
+
 
 useScrollReveal('.scroll-reveal')
 </script>
 
 <style scoped>
-.masonry-grid {
-  column-count: 1;
-  column-gap: 1.5rem;
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 300px;
+  gap: 1.5rem;
 }
+
 @media (min-width: 768px) {
-  .masonry-grid {
-    column-count: 2;
+  .bento-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px);
   }
-}
-@media (min-width: 1024px) {
-  .masonry-grid {
-    column-count: 3;
+  .bento-item:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    height: 100%;
   }
-}
-.masonry-item {
-  break-inside: avoid;
+  .bento-item:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    height: 100%;
+  }
+  .bento-item:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    height: 100%;
+  }
+  .bento-item:nth-child(4) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+    height: 100%;
+  }
 }
 </style>
