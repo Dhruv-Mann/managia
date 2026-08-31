@@ -16,7 +16,7 @@ useScrollReveal('.scroll-reveal')
       <div 
         v-for="(vertical, index) in WORK_VERTICALS" 
         :key="vertical.title"
-        class="scroll-reveal group bg-surface-dark/5 p-8 rounded-2xl border border-surface-dark/10 hover:border-accent transition-colors duration-300"
+        class="scroll-reveal group"
         :style="{ transitionDelay: `${index * 80}ms` }"
       >
         <h3 class="font-display text-2xl text-text-primary">
