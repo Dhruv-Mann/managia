@@ -22,7 +22,7 @@
           <span class="font-display text-xl tracking-[0.15em] uppercase font-bold">MANAGIA</span>
         </NuxtLink>
         <p class="font-sans text-base opacity-60 max-w-sm">
-          A collective of MBA students redefining what a club can be. We build, we host, we play. We do everything.
+          Managing the unmanageable. From messy schedules to landmark events, we build what lasts.
         </p>
       </div>
 

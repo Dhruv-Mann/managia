@@ -23,7 +23,7 @@ useParallax('.parallax-hero-img', 0.15)
       <!-- Left: Description -->
       <div class="text-left">
         <p class="font-sans text-xs md:text-sm text-surface-dark/80 font-medium leading-relaxed max-w-[280px]">
-          A collective of MBA students redefining what a club can be. We build, we host, we play. We do everything.
+          Managing the unmanageable. From messy schedules to landmark events, we build what lasts.
         </p>
       </div>
 
@@ -63,10 +63,13 @@ useParallax('.parallax-hero-img', 0.15)
         <div class="w-32 h-32 md:w-40 md:h-40 bg-root rounded-full flex items-center justify-center shadow-card z-20 cursor-pointer group/badge hover:scale-110 transition-transform duration-500 ease-out">
           <svg class="w-full h-full text-surface-dark animate-[spin_15s_linear_infinite] group-hover/badge:[animation-play-state:paused]" viewBox="0 0 100 100">
             <path id="curve" fill="transparent" d="M 50 15 A 35 35 0 1 1 49.9 15" />
-            <text class="font-mono text-[9px] md:text-[10px] font-bold tracking-[0.2em] uppercase" fill="currentColor">
-              <textPath href="#curve" startOffset="0%">
-                Innovation • Community • Culture • 
-              </textPath>
+            <text class="font-mono text-[9px] md:text-[10px] font-bold tracking-[0.2em] uppercase" fill="currentColor" text-anchor="middle">
+              <textPath href="#curve" startOffset="0%">•</textPath>
+              <textPath href="#curve" startOffset="16.6%">MANAGE</textPath>
+              <textPath href="#curve" startOffset="33.3%">•</textPath>
+              <textPath href="#curve" startOffset="50%">LEAD</textPath>
+              <textPath href="#curve" startOffset="66.6%">•</textPath>
+              <textPath href="#curve" startOffset="83.3%">INSPIRE</textPath>
             </text>
           </svg>
           <!-- Center Logo in Badge -->
