@@ -3,7 +3,8 @@ import { TEAM_MEMBERS } from '~/constants/data'
 import { computed, onMounted } from 'vue'
 import { useScrollReveal } from '~/composables/useScrollReveal'
 
-const previewTeam = computed(() => TEAM_MEMBERS)
+const previewRoles = ['President', 'Vice President', 'Joint Secretary']
+const previewTeam = computed(() => TEAM_MEMBERS.filter(m => previewRoles.includes(m.role)))
 
 useScrollReveal('.scroll-reveal')
 </script>
