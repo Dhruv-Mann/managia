@@ -51,5 +51,5 @@ export interface WorkVertical {
   title: string
   description: string
   icon: string
-  image: string
+  image?: string
 }

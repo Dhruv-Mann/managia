@@ -11,28 +11,19 @@ import type { TeamMember, ClubEvent, GalleryImage, MembershipPlan, WorkVertical 
 
 export const WORK_VERTICALS: WorkVertical[] = [
   {
-    title: 'Hackathons',
-    description: 'Weekend-long build sprints where cross-functional teams ship real products, compete for prizes, and learn by doing.',
-    icon: 'code',
-    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800&auto=format&fit=crop',
-  },
-  {
-    title: 'Conferences',
-    description: 'Speaker-led sessions featuring industry leaders, alumni panels, and deep-dive workshops on business and technology.',
-    icon: 'mic',
-    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop',
-  },
-  {
-    title: 'Cultural Events',
-    description: 'Festivals, open mics, art showcases, and celebrations that bring the campus community together beyond the classroom.',
+    title: 'Fun Events',
+    description: 'High-energy campus experiences, activities, and cultural fests designed to bring everyone together, blow off steam, and break the routine.',
     icon: 'palette',
-    image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=800&auto=format&fit=crop',
   },
   {
-    title: 'Games & Sports',
-    description: 'Tournaments, leagues, and casual game nights — from esports to outdoor sports — designed for every skill level.',
-    icon: 'gamepad',
-    image: 'https://images.unsplash.com/photo-1511882150382-421056c89033?q=80&w=800&auto=format&fit=crop',
+    title: 'Collabs',
+    description: 'Managing partners, co-hosted events, and creative takeovers partnering across different student clubs and communities.',
+    icon: 'users',
+  },
+  {
+    title: 'Conclaves',
+    description: 'Leadership meets and domain-focused conclaves—from Finance and CA to tech and management—bringing industry speakers and real insights to campus.',
+    icon: 'mic',
   },
 ]
 
@@ -280,7 +271,6 @@ export const MEMBERSHIP_PLANS: MembershipPlan[] = [
 // ─── Nav Links ───────────────────────────────────────────────────
 
 export const NAV_LINKS = [
-  { label: 'Work', href: '/work' },
   { label: 'Events', href: '/events' },
   { label: 'Team', href: '/team' },
   { label: 'Gallery', href: '/gallery' },
