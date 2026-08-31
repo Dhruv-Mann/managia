@@ -3,7 +3,7 @@ import { TEAM_MEMBERS } from '~/constants/data'
 import { computed, onMounted } from 'vue'
 import { useScrollReveal } from '~/composables/useScrollReveal'
 
-const previewTeam = computed(() => TEAM_MEMBERS.slice(0, 3))
+const previewTeam = computed(() => TEAM_MEMBERS)
 
 useScrollReveal('.scroll-reveal')
 </script>
@@ -20,7 +20,7 @@ useScrollReveal('.scroll-reveal')
       </div>
       <div class="flex flex-col">
         <div class="scroll-reveal">
-          <UiSectionHeader title="Meet the Team" />
+          <UiSectionHeader title="The Pillars" />
         </div>
         
         <div class="mt-12 flex flex-col gap-8">
@@ -44,7 +44,7 @@ useScrollReveal('.scroll-reveal')
         
         <div class="mt-12 scroll-reveal">
           <UiBaseButton to="/team" variant="ghost">
-            View Full Team →
+            View All Pillars →
           </UiBaseButton>
         </div>
       </div>
