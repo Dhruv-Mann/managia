@@ -15,7 +15,7 @@ useScrollReveal('.scroll-reveal')
         <img 
           src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop" 
           alt="Managia Team" 
-          class="w-full h-full object-cover rounded-xl grayscale contrast-125"
+          class="w-full h-full object-cover rounded-xl"
         />
       </div>
       <div class="flex flex-col">
@@ -33,7 +33,7 @@ useScrollReveal('.scroll-reveal')
             <img 
               :src="member.image" 
               :alt="member.name" 
-              class="w-14 h-14 rounded-full object-cover grayscale"
+              class="w-14 h-14 rounded-full object-cover"
             />
             <div>
               <h4 class="font-display text-base text-text-primary">{{ member.name }}</h4>

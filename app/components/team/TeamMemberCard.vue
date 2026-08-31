@@ -6,7 +6,7 @@
       <img 
         :src="member.image" 
         :alt="member.name"
-        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 grayscale group-hover:grayscale-0"
+        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
       />
     </div>
     
