@@ -4,10 +4,10 @@
       <div class="max-w-7xl mx-auto scroll-reveal">
         <h1 class="font-display text-[12vw] md:text-8xl tracking-tighter leading-[0.9] uppercase">
           The<br/>
-          <span class="text-accent italic pr-4">Team.</span>
+          <span class="text-accent italic pr-4">Pillars.</span>
         </h1>
         <p class="font-sans text-lg md:text-xl opacity-75 mt-8 max-w-md leading-relaxed">
-          The people behind Managia. Meet the collective of students making everything happen.
+          Meet the visionaries planning, driving and executing MANGIA’s success.
         </p>
       </div>
     </section>
