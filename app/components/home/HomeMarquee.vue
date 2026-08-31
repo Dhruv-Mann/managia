@@ -51,7 +51,7 @@ onUnmounted(() => {
   }
 })
 
-const marqueeWords = ['BUILD', 'HOST', 'PLAY', 'MANAGIA']
+const marqueeWords = ['BUILD', 'LEAD', 'INSPIRE']
 </script>
 
 <template>
@@ -63,10 +63,10 @@ const marqueeWords = ['BUILD', 'HOST', 'PLAY', 'MANAGIA']
     -->
     <div ref="track" class="flex whitespace-nowrap will-change-transform">
       <div v-for="i in 2" :key="`marquee-block-${i}`" class="flex items-center px-4">
-        <template v-for="j in 4" :key="`item-${i}-${j}`">
+        <template v-for="(word, index) in marqueeWords" :key="`item-${i}-${index}`">
           <!-- Text -->
           <span class="font-display text-[22vw] md:text-[20vw] font-black tracking-[-0.04em] leading-[0.8] text-surface-dark uppercase pr-6 md:pr-12">
-            {{ marqueeWords[j - 1] }}
+            {{ word }}
           </span>
           <!-- Separator Dot -->
           <span class="font-sans text-[8vw] md:text-[6vw] text-accent pr-6 md:pr-12 -translate-y-2 md:-translate-y-4">
