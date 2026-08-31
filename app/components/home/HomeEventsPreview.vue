@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { EVENTS } from '~/constants/data'
-import { computed, onMounted } from 'vue'
+import { GALLERY_IMAGES } from '~/constants/data'
+import { computed } from 'vue'
 import { useScrollReveal } from '~/composables/useScrollReveal'
 
-const upcomingEvents = computed(() => EVENTS.filter(e => !e.isPast))
+const collage = computed(() => GALLERY_IMAGES.slice(0, 4))
 
 useScrollReveal('.scroll-reveal')
 </script>
@@ -11,35 +11,30 @@ useScrollReveal('.scroll-reveal')
 <template>
   <section class="bg-surface-dark text-text-light py-24">
     <div class="px-6 md:px-12 lg:px-24 scroll-reveal">
-      <UiSectionHeader title="Upcoming Events" mode="light" class="text-text-light" />
+      <UiSectionHeader title="Our Events" mode="light" class="text-text-light" />
     </div>
     
-    <div class="mt-16 flex overflow-x-auto snap-x snap-mandatory no-scrollbar px-6 md:px-12 lg:px-24 gap-6 pb-8">
-      <div 
-        v-for="(event, index) in upcomingEvents" 
-        :key="event.id"
-        class="w-[85vw] md:w-[400px] flex-none snap-center scroll-reveal"
-        :style="{ transitionDelay: `${index * 100}ms` }"
-      >
-        <div class="relative">
-          <img 
-            :src="event.image" 
-            :alt="event.title" 
-            class="w-full h-56 rounded-xl object-cover grayscale contrast-125"
-          />
-          <div class="absolute top-4 left-4 bg-accent text-text-light font-mono text-xs px-3 py-1.5 rounded-lg shadow-elevated">
-            {{ event.date }}
-          </div>
+    <div class="mt-16 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-12 gap-3 md:gap-6">
+        <!-- 1: Mobile full width (col-span-2), Desktop spans 8 cols -->
+        <div class="col-span-2 md:col-span-8 h-[200px] md:h-[400px] scroll-reveal rounded-2xl overflow-hidden group">
+          <img :src="collage[0].src" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
         </div>
-        <div class="mt-6">
-          <h3 class="font-display text-xl">{{ event.title }}</h3>
-          <p class="font-sans text-sm opacity-55 mt-2 line-clamp-2">
-            {{ event.description }}
-          </p>
+        <!-- 2: Mobile 1 col, Desktop spans 4 cols -->
+        <div class="col-span-1 md:col-span-4 h-[160px] md:h-[400px] scroll-reveal rounded-2xl overflow-hidden group" style="transition-delay: 100ms">
+          <img :src="collage[1].src" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+        </div>
+        <!-- 3: Mobile 1 col, Desktop spans 5 cols -->
+        <div class="col-span-1 md:col-span-5 h-[160px] md:h-[350px] scroll-reveal rounded-2xl overflow-hidden group" style="transition-delay: 200ms">
+          <img :src="collage[2].src" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+        </div>
+        <!-- 4: Mobile full width (col-span-2), Desktop spans 7 cols -->
+        <div class="col-span-2 md:col-span-7 h-[200px] md:h-[350px] scroll-reveal rounded-2xl overflow-hidden group" style="transition-delay: 300ms">
+          <img :src="collage[3].src" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
         </div>
       </div>
       
-      <div class="w-[85vw] md:w-[300px] flex-none snap-center flex items-center justify-center scroll-reveal">
+      <div class="mt-16 flex justify-center scroll-reveal" style="transition-delay: 400ms">
         <UiBaseButton to="/events" variant="ghost" class="text-text-light">
           View All Events →
         </UiBaseButton>
@@ -47,13 +42,3 @@ useScrollReveal('.scroll-reveal')
     </div>
   </section>
 </template>
-
-<style scoped>
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-</style>
