@@ -293,5 +293,5 @@ export const SOCIAL_LINKS = {
   instagram: '#',
   linkedin: '#',
   twitter: '#',
-  email: 'hello@managia.club',
+  email: 'managia@muj.manipal.edu',
 } as const

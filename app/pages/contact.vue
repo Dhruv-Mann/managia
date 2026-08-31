@@ -46,31 +46,19 @@
         <div class="space-y-12">
           <!-- Leader 1 -->
           <div class="group">
-            <h3 class="font-display text-4xl text-surface-dark mb-1">Arjun Mehta</h3>
+            <h3 class="font-display text-4xl text-surface-dark mb-1">Sajal Bansal</h3>
             <p class="font-sans text-sm text-accent font-bold uppercase tracking-widest mb-4">President</p>
             <div class="space-y-2">
-              <a href="mailto:arjun@managia.club" class="block font-sans text-lg text-surface-dark/80 hover:text-surface-dark transition-colors">arjun@managia.club</a>
-              <a href="tel:+1234567890" class="block font-sans text-lg text-surface-dark/80 hover:text-surface-dark transition-colors">+1 (234) 567-8901</a>
+              <a href="tel:+916395950156" class="block font-sans text-lg text-surface-dark/80 hover:text-surface-dark transition-colors">+91 63959 50156</a>
             </div>
           </div>
 
           <!-- Leader 2 -->
           <div class="group">
-            <h3 class="font-display text-4xl text-surface-dark mb-1">Priya Sharma</h3>
-            <p class="font-sans text-sm text-accent font-bold uppercase tracking-widest mb-4">VP Operations</p>
+            <h3 class="font-display text-4xl text-surface-dark mb-1">Devang Dave</h3>
+            <p class="font-sans text-sm text-accent font-bold uppercase tracking-widest mb-4">Vice President</p>
             <div class="space-y-2">
-              <a href="mailto:priya@managia.club" class="block font-sans text-lg text-surface-dark/80 hover:text-surface-dark transition-colors">priya@managia.club</a>
-              <a href="tel:+19876543210" class="block font-sans text-lg text-surface-dark/80 hover:text-surface-dark transition-colors">+1 (987) 654-3210</a>
-            </div>
-          </div>
-
-          <!-- Leader 3 -->
-          <div class="group">
-            <h3 class="font-display text-4xl text-surface-dark mb-1">Karan Patel</h3>
-            <p class="font-sans text-sm text-accent font-bold uppercase tracking-widest mb-4">Head of Events</p>
-            <div class="space-y-2">
-              <a href="mailto:karan@managia.club" class="block font-sans text-lg text-surface-dark/80 hover:text-surface-dark transition-colors">karan@managia.club</a>
-              <a href="tel:+15551234567" class="block font-sans text-lg text-surface-dark/80 hover:text-surface-dark transition-colors">+1 (555) 123-4567</a>
+              <a href="tel:+917096239801" class="block font-sans text-lg text-surface-dark/80 hover:text-surface-dark transition-colors">+91 70962 39801</a>
             </div>
           </div>
         </div>
